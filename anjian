@@ -1,2 +1,6 @@
 Dim pX1,pY1
 Dim pX2,pY2
+
+Function checkOk
+
+End Function
