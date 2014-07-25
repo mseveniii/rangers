@@ -28,12 +28,15 @@ Dim color29,pX29,pY29
 Dim color30,pX30,pY30
 Dim color31,pX31,pY31
 Dim color32,pX32,pY32
+Dim colorR,colorG,colorB,rr,gg,bb,colorRange
 
 width = GetScreenX()
 height = GetScreenY()
 swipeCount = 1
+colorRange = 20
 
 If width=720 and height=1280 Then
+
 	//主畫面
 	pX1 = 620
 	pY1 = 72
@@ -143,10 +146,354 @@ If width=720 and height=1280 Then
 	pX32 = 70
 	pY32 = 704
 	color32 = "FF0884"
-	
-	
-	
+
 	start()
+	
+ElseIf width=1080 and height=1920 Then
+
+
+	//主畫面
+	pX1 = 971
+	pY1 = 66
+	color1 = "29D7FF"
+	//檢查是否有羽毛
+	pX2 = 1024
+	pY2 = 677
+	color2 = "00CEE6"
+	//按下主畫面開始
+	pX3 = 113
+	pY3 = 1726
+	//按下中間關卡
+	pX4 = 537
+	pY4 = 953
+	//按下一步
+	pX5 = 128
+	pY5 = 809
+	//按開始
+	pX6 = 132
+	pY6 = 812
+	//檢查是否進入戰鬥
+	pX7 = 955
+	pY7 = 1827
+	color7 = "193973"
+	//按下Auto
+	pX8 = 855
+	pY8 = 1824
+	//贏
+	pX9 = 1039
+	pY9 = 372
+	color9 = "D66D10"
+	//按下停止
+	pX10 = 160
+	pY10 = 835
+	Color10 = "31BE00"
+	//按下確認
+	pX11 = 165
+	pY11 = 1048
+	//回上一頁
+	pX12 = 1017
+	pY12 = 69
+	//按下團戰
+	pX13 = 156
+	pY13 = 1177
+	//檢查團戰羽毛
+	pX14 = 1021
+	pY14 = 890
+	color14 = "7BFBDE"
+	//按下團戰戰鬥
+	pX15 = 198
+	pY15 = 1351
+	//按下團戰下一步
+	pX16 = 122
+	pY16 = 807
+	//按下團戰開始
+	pX17 = 121
+	pY17 = 810
+	//按飛彈和Rangers
+	pX18 = 26
+	pY18 = 307
+	pX19 = 26
+	pY19 = 555
+	pX20 = 26
+	pY20 = 760
+	pX21 = 26
+	pY21 = 960
+	pX22 = 26
+	pY22 = 1166
+	pX23 = 26
+	pY23 = 1366
+	//檢查團戰結束
+	pX24 = 198
+	pY24 = 1338
+	color24 = "0010D6"
+	//按下好友
+	pX25 = 119
+	pY25 = 548
+	//向左滑一個
+	spX1 = 448
+	spY1 = 1191
+	spX2 = 448
+	spY2 = 962
+	//檢查是否滑到最後一個
+	pX26 = 339
+	pY26 = 1654
+	color26 = "FF3500"
+	//按下好友照片
+	pX27 = 611
+	pY27 = 183
+	//檢查登入獎勵
+	pX28 = 354
+	pY28 = 873
+	color28 = "31BA00"
+	//檢查登入活動獎勵
+	pX29 = 961
+	pY29 = 1689
+	color29 = "42EFFF"
+	//升級確認
+	pX30 = 102
+	pY30 = 425
+	color30 = "31BE00"
+	//檢查是否連線不穩定
+	pX31 = 354
+	pY31 = 873
+	color31 = "31BA00"
+	//檢查是否能與朋友對戰
+	pX32 = 199
+	pY32 = 1069
+	color32 = "FF209C"
+
+	start()
+	
+ElseIf width = 1280 and height = 800
+
+	//主畫面
+	pX1 = 41
+	pY1 = 97
+	color1 = "1AC1F4"
+	//檢查是否有羽毛
+	pX2 = 450
+	pY2 = 80
+	color2 = "00C3E9"
+	//按下主畫面開始
+	pX3 = 1155
+	pY3 = 688
+	//按下中間關卡
+	pX4 = 634
+	pY4 = 395
+	//按下一步
+	pX5 = 536
+	pY5 = 687
+	//按開始
+	pX6 = 534
+	pY6 = 678
+	//檢查是否進入戰鬥
+	pX7 = 1220
+	pY7 = 124
+	color7 = "173470"
+	//按下Auto
+	pX8 = 1215
+	pY8 = 178
+	//贏
+	pX9 = 250
+	pY9 = 69
+	color9 = "D97212"
+	//按下停止
+	pX10 = 557
+	pY10 = 651
+	Color10 = "32C205"
+	//按下確認
+	pX11 = 673
+	pY11 = 659
+	//回上一頁
+	pX12 = 42
+	pY12 = 78
+	//按下團戰
+	pX13 = 777
+	pY13 = 669
+	//檢查團戰羽毛
+	pX14 = 592
+	pY14 = 79
+	color14 = "73F8E7"
+	//按下團戰戰鬥
+	pX15 = 876
+	pY15 = 637
+	//按下團戰下一步
+	pX16 = 509
+	pY16 = 681
+	//按下團戰開始
+	pX17 = 514
+	pY17 = 680
+	//按飛彈和Rangers
+	pX18 = 191
+	pY18 = 737
+	pX19 = 372
+	pY19 = 737
+	pX20 = 503
+	pY20 = 737
+	pX21 = 641
+	pY21 = 737
+	pX22 = 776
+	pY22 = 737
+	pX23 = 911
+	pY23 = 737
+	//檢查團戰結束
+	pX24 = 859
+	pY24 = 633
+	color24 = "000FCF"
+	//按下好友
+	pX25 = 378
+	pY25 = 669
+	//向左滑一個
+	spX1 = 378
+	spY1 = 669
+	spX2 = 644
+	spY2 = 460
+	//檢查是否滑到最後一個
+	pX26 = 1104
+	pY26 = 536
+	color26 = "FF3300"
+	//按下好友照片
+	pX27 = 0
+	pY27 = 0
+	//檢查登入獎勵
+	pX28 = 0
+	pY28 = 0
+	color28 = ""
+	//檢查登入活動獎勵
+	pX29 = 0
+	pY29 = 0
+	color29 = ""
+	//升級確認
+	pX30 = 409
+	pY30 = 649
+	color30 = "32C205"
+	//檢查是否連線不穩定
+	pX31 = 0
+	pY31 = 0
+	color31 = ""
+	//檢查是否能與朋友對戰
+	pX32 = 712
+	pY32 = 632
+	color32 = "FF209B"
+
+	start()
+	
+ElseIf width = 480 and height = 800
+
+	//主畫面
+	pX1 = 420
+	pY1 = 28
+	color1 = "25D3F9"
+	//檢查是否有羽毛
+	pX2 = 440
+	pY2 = 282
+	color2 = "00D5EF"
+	//按下主畫面開始
+	pX3 = 64
+	pY3 = 725
+	//按下中間關卡
+	pX4 = 235
+	pY4 = 399
+	//按下一步
+	pX5 = 66
+	pY5 = 333
+	//按開始
+	pX6 = 64
+	pY6 = 341
+	//檢查是否進入戰鬥
+	pX7 = 411
+	pY7 = 762
+	color7 = "183672"
+	//按下Auto
+	pX8 = 383
+	pY8 = 765
+	//贏
+	pX9 = 448
+	pY9 = 157
+	color9 = "D96F11"
+	//按下停止
+	pX10 = 81
+	pY10 = 351
+	Color10 = "32C205"
+	//按下確認
+	pX11 = 80
+	pY11 = 459
+	//回上一頁
+	pX12 = 440
+	pY12 = 27
+	//按下團戰
+	pX13 = 82
+	pY13 = 490
+	//檢查團戰羽毛
+	pX14 = 438
+	pY14 = 370
+	color14 = "54EDE9"
+	//按下團戰戰鬥
+	pX15 = 98
+	pY15 = 550
+	//按下團戰下一步
+	pX16 = 69
+	pY16 = 329
+	//按下團戰開始
+	pX17 = 64
+	pY17 = 328
+	//按飛彈和Rangers
+	pX18 = 27
+	pY18 = 124
+	pX19 = 27
+	pY19 = 232
+	pX20 = 27
+	pY20 = 321
+	pX21 = 27
+	pY21 = 400
+	pX22 = 27
+	pY22 = 486
+	pX23 = 27
+	pY23 = 573
+	//檢查團戰結束
+	pX24 = 96
+	pY24 = 552
+	color24 = "000FCF"
+	//按下好友
+	pX25 = 63
+	pY25 = 232
+	//向左滑一個
+	spX1 = 192
+	spY1 = 486
+	spX2 = 192
+	spY2 = 416
+	//檢查是否滑到最後一個
+	pX26 = 155
+	pY26 = 691
+	color26 = "FF3300"
+	//按下好友照片
+	pX27 = 0
+	pY27 = 0
+	//檢查登入獎勵
+	pX28 = 0
+	pY28 = 0
+	color28 = ""
+	//檢查登入活動獎勵
+	pX29 = 0
+	pY29 = 0
+	color29 = ""
+	//升級確認
+	pX30 = 80
+	pY30 = 259
+	color30 = "32C205"
+	//檢查是否連線不穩定
+	pX31 = 0
+	pY31 = 0
+	color31 = ""
+	//檢查是否能與朋友對戰
+	pX32 = 94
+	pY32 = 447
+	color32 = "FF1F9A"
+
+	start()
+Else
+	ShowMessage "不支援 " & width & "X" & height & "，將自動停止"
+	Delay 3000
 End If
 
 Function start()
@@ -342,7 +689,10 @@ End Function
 
 Function checkMain()//檢查是否在主畫面
 	ShowMessage "檢查是否在主畫面"
-	If GetPixelColor(pX1,pY1)=color1 Then
+	ColorToRGB color1, colorR, colorG, colorB
+	ColorToRGB GetPixelColor(pX1,pY1) , rr, gg, bb
+
+	If rr<colorR+colorRange and rr>colorR-colorRange and gg<colorG+colorRange and gg>colorG-colorRange and bb<colorB+colorRange and bb>colorB-colorRange Then
 		checkMain = 1
 	Else
 		checkMain = 0
@@ -351,8 +701,12 @@ End Function
 
 Function checklife()//檢查主畫面羽毛
 	ShowMessage "檢查主畫面羽毛"
-	If GetPixelColor(pX2,pY2)=color2 Then
-		checklife=1
+
+	ColorToRGB color2, colorR, colorG, colorB
+	ColorToRGB GetPixelColor(pX2,pY2) , rr, gg, bb
+
+	If rr<colorR+colorRange and rr>colorR-colorRange and gg<colorG+colorRange and gg>colorG-colorRange and bb<colorB+colorRange and bb>colorB-colorRange Then
+	 	checklife=1
 	Else
 		checklife=0
 	End If
@@ -376,8 +730,12 @@ End Function
 
 Function checkFight()//檢查是否進入戰鬥畫面
 	ShowMessage "檢查是否進入戰鬥畫面"
-	If GetPixelColor(pX7,pY7)=color7 Then
-		checkFight=1
+
+	ColorToRGB color7, colorR, colorG, colorB
+	ColorToRGB GetPixelColor(pX7,pY7) , rr, gg, bb
+
+	If rr<colorR+colorRange and rr>colorR-colorRange and gg<colorG+colorRange and gg>colorG-colorRange and bb<colorB+colorRange and bb>colorB-colorRange Then
+	 	checkFight=1
 	Else
 		checkFight=0
 	End If
@@ -389,8 +747,12 @@ End Function
 
 Function checkWin()//贏
 	ShowMessage "檢查是否贏"
-	If GetPixelColor(pX9,pY9)=color9 Then
-		Delay 1000
+
+	ColorToRGB color9, colorR, colorG, colorB
+	ColorToRGB GetPixelColor(pX9,pY9) , rr, gg, bb
+
+	If rr<colorR+colorRange and rr>colorR-colorRange and gg<colorG+colorRange and gg>colorG-colorRange and bb<colorB+colorRange and bb>colorB-colorRange Then
+	 	Delay 1000
 		Touch pX9,pY9,100
 		checkWin=1
 	Else
@@ -400,8 +762,12 @@ End Function
 
 Function checkStop()//按下停止
 	ShowMessage "按下停止"
-	If GetPixelColor(pX10,pY10)=color10 Then
-		Delay 1000
+
+	ColorToRGB color10, colorR, colorG, colorB
+	ColorToRGB GetPixelColor(pX10,pY10) , rr, gg, bb
+
+	If rr<colorR+colorRange and rr>colorR-colorRange and gg<colorG+colorRange and gg>colorG-colorRange and bb<colorB+colorRange and bb>colorB-colorRange Then
+	 		Delay 1000
 		Touch pX10,pY10,100
 		checkStop=1
 	Else
@@ -423,8 +789,12 @@ End Function
 
 Function checkTeamLife()//檢查是否有團戰羽毛
 	ShowMessage "檢查是否有團戰羽毛"
-	If GetPixelColor(pX14,pY14)=color14 Then
-		checkTeamLife=1
+
+	ColorToRGB color14, colorR, colorG, colorB
+	ColorToRGB GetPixelColor(pX14,pY14) , rr, gg, bb
+
+	If rr<colorR+colorRange and rr>colorR-colorRange and gg<colorG+colorRange and gg>colorG-colorRange and bb<colorB+colorRange and bb>colorB-colorRange Then
+	 		checkTeamLife=1
 	Else
 		checkTeamLife=0
 	End If
@@ -459,8 +829,12 @@ End Function
 
 Function checkTeamWin()//檢查團戰是否結束
 	ShowMessage "檢查團戰是否結束"
-	If GetPixelColor(pX24,pY24)=color24 Then
-		checkTeamWin=1
+
+	ColorToRGB color24, colorR, colorG, colorB
+	ColorToRGB GetPixelColor(pX24,pY24) , rr, gg, bb
+
+	If rr<colorR+colorRange and rr>colorR-colorRange and gg<colorG+colorRange and gg>colorG-colorRange and bb<colorB+colorRange and bb>colorB-colorRange Then
+	 		checkTeamWin=1
 	Else
 		checkTeamWin=0
 	End If
@@ -477,8 +851,12 @@ End Function
 Function checkFriendLast()//檢查是否滑到最後
 	ShowMessage "檢查是否滑到最後"
 	Delay 5000
-	If GetPixelColor(pX26,pY26)=color26 Then
-		checkFriendLast=1
+
+	ColorToRGB color26, colorR, colorG, colorB
+	ColorToRGB GetPixelColor(pX26,pY26) , rr, gg, bb
+
+	If rr<colorR+colorRange and rr>colorR-colorRange and gg<colorG+colorRange and gg>colorG-colorRange and bb<colorB+colorRange and bb>colorB-colorRange Then
+	 		checkFriendLast=1
 	Else
 		checkFriendLast=0
 	End If
@@ -491,40 +869,60 @@ End Function
 Function checkLogin()//檢查登入獎勵
 	ShowMessage "檢查登入獎勵"
 	Delay 5000
-	If GetPixelColor(pX28,pY28)=color28 Then
-		Touch pX28,pY28,100
+
+	ColorToRGB color28, colorR, colorG, colorB
+	ColorToRGB GetPixelColor(pX28,pY28) , rr, gg, bb
+
+	If rr<colorR+colorRange and rr>colorR-colorRange and gg<colorG+colorRange and gg>colorG-colorRange and bb<colorB+colorRange and bb>colorB-colorRange Then
+	 		Touch pX28,pY28,100
 	End If
 End Function
 
 Function checkLogin2()//檢查登入獎勵活動
 	ShowMessage "檢查登入獎勵活動"
 	Delay 5000
-	If GetPixelColor(pX29,pY29)=color29 Then
-		Touch pX29,pY29,100
+
+	ColorToRGB color29, colorR, colorG, colorB
+	ColorToRGB GetPixelColor(pX29,pY29) , rr, gg, bb
+
+	If rr<colorR+colorRange and rr>colorR-colorRange and gg<colorG+colorRange and gg>colorG-colorRange and bb<colorB+colorRange and bb>colorB-colorRange Then
+	 		Touch pX29,pY29,100
 	End If
 End Function
 
 Function checkLevelUp()//升級確認
 	ShowMessage "檢查是否升級"
 	Delay 5000
-	If GetPixelColor(pX30,pY30)=color30 Then
-		Touch pX30,pY30,100
+
+	ColorToRGB color30, colorR, colorG, colorB
+	ColorToRGB GetPixelColor(pX30,pY30) , rr, gg, bb
+
+	If rr<colorR+colorRange and rr>colorR-colorRange and gg<colorG+colorRange and gg>colorG-colorRange and bb<colorB+colorRange and bb>colorB-colorRange Then
+	 		Touch pX30,pY30,100
 	End If
 End Function
 
 Function checkOnline()
 	ShowMessage "檢查是否連線不穩定"
 	Delay 5000
-	If GetPixelColor(pX31,pY31)=color31 Then
-		Touch pX31,pY31,100
+
+	ColorToRGB color31, colorR, colorG, colorB
+	ColorToRGB GetPixelColor(pX31,pY31) , rr, gg, bb
+
+	If rr<colorR+colorRange and rr>colorR-colorRange and gg<colorG+colorRange and gg>colorG-colorRange and bb<colorB+colorRange and bb>colorB-colorRange Then
+	 		Touch pX31,pY31,100
 	End If
 End Function
 
 Function checkFriendFight()
 	ShowMessage "檢查是否能與朋友對戰"
 	Delay 5000
-	If GetPixelColor(pX32,pY32)=color32 Then
-		checkFriendFight=1
+
+	ColorToRGB color32, colorR, colorG, colorB
+  	ColorToRGB GetPixelColor(pX32,pY32) , rr, gg, bb
+
+	If rr<colorR+colorRange and rr>colorR-colorRange and gg<colorG+colorRange and gg>colorG-colorRange and bb<colorB+colorRange and bb>colorB-colorRange Then
+	 		checkFriendFight=1
 	Else
 		checkFriendFight=0
 	End If
@@ -536,8 +934,12 @@ End Function
 
 Function checkFriendWin()//檢查好友對戰是否結束
 	ShowMessage "檢查好友對戰是否結束"
-	If GetPixelColor(pX7,pY7)<>color7 Then
-		checkFriendWin=1
+
+ColorToRGB color7, colorR, colorG, colorB
+  ColorToRGB GetPixelColor(pX7,pY7) , rr, gg, bb
+
+	If rr<colorR+colorRange and rr>colorR-colorRange and gg<colorG+colorRange and gg>colorG-colorRange and bb<colorB+colorRange and bb>colorB-colorRange Then
+	 		checkFriendWin=1
 	Else
 		checkFriendWin=0
 	End If
