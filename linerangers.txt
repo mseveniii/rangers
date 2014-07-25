@@ -767,7 +767,7 @@ Function checkStop()//按下停止
 	ColorToRGB GetPixelColor(pX10,pY10) , rr, gg, bb
 
 	If rr<colorR+colorRange and rr>colorR-colorRange and gg<colorG+colorRange and gg>colorG-colorRange and bb<colorB+colorRange and bb>colorB-colorRange Then
-	 		Delay 1000
+	 	Delay 1000
 		Touch pX10,pY10,100
 		checkStop=1
 	Else
@@ -794,7 +794,7 @@ Function checkTeamLife()//檢查是否有團戰羽毛
 	ColorToRGB GetPixelColor(pX14,pY14) , rr, gg, bb
 
 	If rr<colorR+colorRange and rr>colorR-colorRange and gg<colorG+colorRange and gg>colorG-colorRange and bb<colorB+colorRange and bb>colorB-colorRange Then
-	 		checkTeamLife=1
+	 	checkTeamLife=1
 	Else
 		checkTeamLife=0
 	End If
@@ -834,7 +834,7 @@ Function checkTeamWin()//檢查團戰是否結束
 	ColorToRGB GetPixelColor(pX24,pY24) , rr, gg, bb
 
 	If rr<colorR+colorRange and rr>colorR-colorRange and gg<colorG+colorRange and gg>colorG-colorRange and bb<colorB+colorRange and bb>colorB-colorRange Then
-	 		checkTeamWin=1
+	 	checkTeamWin=1
 	Else
 		checkTeamWin=0
 	End If
@@ -856,7 +856,7 @@ Function checkFriendLast()//檢查是否滑到最後
 	ColorToRGB GetPixelColor(pX26,pY26) , rr, gg, bb
 
 	If rr<colorR+colorRange and rr>colorR-colorRange and gg<colorG+colorRange and gg>colorG-colorRange and bb<colorB+colorRange and bb>colorB-colorRange Then
-	 		checkFriendLast=1
+	 	checkFriendLast=1
 	Else
 		checkFriendLast=0
 	End If
@@ -874,7 +874,7 @@ Function checkLogin()//檢查登入獎勵
 	ColorToRGB GetPixelColor(pX28,pY28) , rr, gg, bb
 
 	If rr<colorR+colorRange and rr>colorR-colorRange and gg<colorG+colorRange and gg>colorG-colorRange and bb<colorB+colorRange and bb>colorB-colorRange Then
-	 		Touch pX28,pY28,100
+	 	Touch pX28,pY28,100
 	End If
 End Function
 
@@ -886,7 +886,7 @@ Function checkLogin2()//檢查登入獎勵活動
 	ColorToRGB GetPixelColor(pX29,pY29) , rr, gg, bb
 
 	If rr<colorR+colorRange and rr>colorR-colorRange and gg<colorG+colorRange and gg>colorG-colorRange and bb<colorB+colorRange and bb>colorB-colorRange Then
-	 		Touch pX29,pY29,100
+	 	Touch pX29,pY29,100
 	End If
 End Function
 
@@ -898,7 +898,7 @@ Function checkLevelUp()//升級確認
 	ColorToRGB GetPixelColor(pX30,pY30) , rr, gg, bb
 
 	If rr<colorR+colorRange and rr>colorR-colorRange and gg<colorG+colorRange and gg>colorG-colorRange and bb<colorB+colorRange and bb>colorB-colorRange Then
-	 		Touch pX30,pY30,100
+	 	Touch pX30,pY30,100
 	End If
 End Function
 
@@ -910,7 +910,7 @@ Function checkOnline()
 	ColorToRGB GetPixelColor(pX31,pY31) , rr, gg, bb
 
 	If rr<colorR+colorRange and rr>colorR-colorRange and gg<colorG+colorRange and gg>colorG-colorRange and bb<colorB+colorRange and bb>colorB-colorRange Then
-	 		Touch pX31,pY31,100
+	 	Touch pX31,pY31,100
 	End If
 End Function
 
@@ -922,7 +922,7 @@ Function checkFriendFight()
   	ColorToRGB GetPixelColor(pX32,pY32) , rr, gg, bb
 
 	If rr<colorR+colorRange and rr>colorR-colorRange and gg<colorG+colorRange and gg>colorG-colorRange and bb<colorB+colorRange and bb>colorB-colorRange Then
-	 		checkFriendFight=1
+	 	checkFriendFight=1
 	Else
 		checkFriendFight=0
 	End If
@@ -939,8 +939,8 @@ Function checkFriendWin()//檢查好友對戰是否結束
 	ColorToRGB GetPixelColor(pX7,pY7) , rr, gg, bb
 
 	If rr<colorR+colorRange and rr>colorR-colorRange and gg<colorG+colorRange and gg>colorG-colorRange and bb<colorB+colorRange and bb>colorB-colorRange Then
-	 		checkFriendWin=1
+	 	checkFriendWin=0
 	Else
-		checkFriendWin=0
+		checkFriendWin=1
 	End If
 End Function
