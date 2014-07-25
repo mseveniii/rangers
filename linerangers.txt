@@ -939,8 +939,8 @@ Function checkFriendWin()//檢查好友對戰是否結束
 	ColorToRGB GetPixelColor(pX7,pY7) , rr, gg, bb
 
 	If rr<colorR+colorRange and rr>colorR-colorRange and gg<colorG+colorRange and gg>colorG-colorRange and bb<colorB+colorRange and bb>colorB-colorRange Then
-	 		checkFriendWin=1
+	 	checkFriendWin=0
 	Else
-		checkFriendWin=0
+		checkFriendWin=1
 	End If
 End Function
