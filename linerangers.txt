@@ -364,6 +364,7 @@ While 1=1
 			
 			ShowMessage "按下團戰開始"
 			clickTeamStart()
+			Delay 1000
 			
 			While checkFight()=0//是否進入戰鬥
 			Delay 1000
