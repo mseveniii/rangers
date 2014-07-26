@@ -336,7 +336,7 @@ While 1=1
 		Wend
 		
 		ShowMessage "等待3秒，按下確認"
-		Delay 3000
+		Delay 5000
 		clickOK()
 		
 		ShowMessage "等待10秒"
