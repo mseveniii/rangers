@@ -29,11 +29,13 @@ Dim color30,pX30,pY30
 Dim color31,pX31,pY31
 Dim color32,pX32,pY32
 Dim colorR,colorG,colorB,rr,gg,bb,colorRange
+Dim friendCount
 
 width = GetScreenX()
 height = GetScreenY()
 swipeCount = 1
 colorRange = 20
+friendCount = -1 //設定要打幾個好友，若是-1則全打
 
 If width=720 and height=1280 Then
 
@@ -396,6 +398,7 @@ While 1=1
 			While 1=1
 				ShowMessage "等待3秒"
 				Delay 3000
+				If friendCount=swipeCount-1 Then Exit While
 				For swipeCount
 					ShowMessage "滑到第" & swipeCount & "個朋友"
 					swipeLeft()//向左滑一個
