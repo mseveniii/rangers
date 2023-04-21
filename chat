@@ -1,0 +1,67 @@
+#include <Servo.h>
+
+// 設定紅外線感測器接口
+const int irA = 2; // irA 用於偵測物品掉落
+const int irB = 3; // irB 用於偵測物品到達傳輸機 B
+// 設定繼電器接口
+const int rlayA = 4; // rlayA 用於控制傳輸機 A
+const int rlayB = 5; // rlayB 用於控制傳輸機 B
+// 設定伺服馬達接口
+const int seoApin = 6; // seoA 用於轉動伺服馬達 A
+const int seoBpin = 7; // seoB 用於轉動伺服馬達 B
+
+Servo seoA, seoB;
+
+void setup() {
+  pinMode(irA, INPUT);
+  pinMode(irB, INPUT);
+  pinMode(rlayA, OUTPUT);
+  pinMode(rlayB, OUTPUT);
+  digitalWrite(rlayA, HIGH); // rlayA 預設為通電狀態
+  digitalWrite(rlayB, HIGH); // rlayB 預設為通電狀態
+  seoA.attach(seoApin);
+  seoB.attach(seoBpin);
+  Serial.begin(9600);
+ // 設定 Serial Port 讀取 Timeout 為 5 秒
+  Serial.setTimeout(5000);
+}
+
+void loop() {
+  // 當 irA 偵測到物品掉落時，關閉 rlayA 並開啟 rlayB
+  if (digitalRead(irA) == HIGH) {
+    digitalWrite(rlayA, LOW);
+    digitalWrite(rlayB, HIGH);
+    // 等待物品到達傳輸機 B
+    while (digitalRead(irB) == LOW) {
+      delay(100);
+    }
+	
+	Serial.println("wait for scanning");
+	
+	String data = "";
+	
+    // 等待 Serial Port 傳回資料
+    while (Serial.available()) {
+		delay(100);
+		// 讀取 Serial Port 傳回資料
+		data = Serial.readString();
+		String get_request = "";
+		get_request = data.substring(2,50);
+		data = get_request.substring(0,get_request.indexOf("n"));
+
+
+		// 判斷伺服馬達要轉動的方向
+		if (data == "0") {
+		  seoA.write(90);
+		} else if (data == "1") {
+		  seoB.write(90);
+		  digitalWrite(rlayB, LOW);
+		}
+		// 等待 3 秒後，伺服馬達歸位並開啟 rlayA
+		delay(3000);
+		seoA.write(0);
+		seoB.write(0);
+		digitalWrite(rlayA, HIGH);
+    }		
+  }
+}
